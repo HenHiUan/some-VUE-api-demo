@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+   <Mine :fData="transmitData"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Mine from '../components/MineComponents/Mine'
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Mine
+  },
+  data () {
+    return {
+      transmitData:{
+          title:'Xuan',
+          uuid:'hins'
+      }
+    }
   }
 }
 </script>
+
+<style scoped>
+.home{
+  height: 100%;
+}
+</style>
+
+
